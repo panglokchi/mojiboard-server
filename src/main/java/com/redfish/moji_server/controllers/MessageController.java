@@ -33,7 +33,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;;
 
 @Controller
-@CrossOrigin(origins = {"http://localhost:3000", "http://172.26.87.217:3000"})
+@CrossOrigin(origins = {"http://localhost:3000", "http://172.26.87.217:3000", "https://mojichan.com"})
 @RequestMapping(path="/message") 
 public class MessageController {
     @Autowired
