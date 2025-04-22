@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import java.util.HashSet;
@@ -87,4 +88,13 @@ public class Message {
   public void addChildren(Message child) {
     this.children.add(child);
   }
+
+  @JsonProperty("totalChildrenCount")
+  public int getTotalChildrenCount() {
+    int count = children.size();
+    for (Message child : children) {
+        count += child.getTotalChildrenCount(); // Recursively count children's children
+    }
+    return count;
+}
 }
