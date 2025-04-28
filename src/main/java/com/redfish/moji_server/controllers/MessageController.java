@@ -103,7 +103,7 @@ public class MessageController {
         //headers.add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36");
 
         JSONObject instruction = new JSONObject();
-        instruction.put("thought", true);
+        //instruction.put("thought", true);
         instruction.put("text", "Convert the following text to Emoji, preserving sentence structure using spaces.");
         JSONObject text = new JSONObject();
         text.put("text", translationRequest.getContent());
