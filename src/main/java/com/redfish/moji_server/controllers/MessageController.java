@@ -151,6 +151,7 @@ public class MessageController {
         public ArrayList<Candidate> candidates;
         public UsageMetadata usageMetadata;
         public String modelVersion;
+        public String responseId;
     }
 
     public static class Candidate{
